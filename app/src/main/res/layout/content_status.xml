@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_status"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="org.giasalfeusi.android.fremo.StatusActivity"
+    tools:showIn="@layout/activity_status">
+
+    <TextView
+        android:text="Object Temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView" />
+
+    <TextView
+        android:text="Not available"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:id="@+id/tempTextViewId"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="false"
+        android:textStyle="normal|bold"
+        android:elegantTextHeight="false"
+        tools:gravity="center"
+        android:textIsSelectable="false"
+        android:textSize="48sp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tempTextViewId"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp"
+        android:id="@+id/progressBarId"
+        android:fadingEdge="horizontal|vertical" />
+
+    <TextView
+        android:text="RSSI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/rssiProgressBarId"
+        android:layout_alignStart="@+id/rssiProgressBarId"
+        android:layout_marginStart="17dp" />
+
+    <TextView
+        android:text="Battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/batteryProgressBarId"
+        android:layout_alignStart="@+id/batteryProgressBarId"
+        android:layout_marginStart="12dp" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rssiProgressBarId"
+        android:layout_below="@+id/progressBarId"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_marginEnd="18dp"
+        android:indeterminateOnly="false"
+        style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+        android:indeterminate="true" />
+
+    <ProgressBar
+        style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/batteryProgressBarId"
+        android:layout_marginEnd="31dp"
+        android:layout_below="@+id/progressBarId"
+        android:layout_alignParentEnd="true"
+        android:indeterminateOnly="false"
+        android:indeterminate="true" />
+
+</RelativeLayout>
